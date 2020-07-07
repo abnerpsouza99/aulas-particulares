@@ -5,11 +5,12 @@ const nunjucks = require("nunjucks")
 /* This const is responsable for routes. (Import the routes of routes.js) */
 const routes = require('./routes')
 
-server.use(routes)
-
+server.use(express.urlencoded({extended: true}))
 server.use(express.static('public/styles'))
 server.use(express.static('public/assets'))
 server.use(express.static('src/scripts'))
+
+server.use(routes)
 
 server.set("view engine", "njk")
 

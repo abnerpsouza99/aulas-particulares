@@ -134,5 +134,42 @@ header {
 }
 
 .details .item:last-child {
-    border: none;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+input {
+    width: 100%;
+    padding: 16px auto;
+    font-size: 16px;
+    outline: none;
+    font-weight: bold;
+}
+
+select {
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    outline: none;
+}
+
+input[type="radio"]{
+    margin-right: 8px;
+    width: initial;
+}
+
+button[type="submit"] {
+    width: 100%;
+    background-color: gray;
+    color: white;
+    font-size: 16px;
+    padding: 8px 32px;
+    border-radius: 4px;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--main-color);
+    color: white;
+    transition: 700ms;
 }

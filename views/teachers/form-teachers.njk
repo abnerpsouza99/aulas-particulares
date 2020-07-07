@@ -1,0 +1,45 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+    <form class="card" action="/teachers" method="POST">
+        <section class="image-teacher" style="background: url(https://source.unsplash.com/collection/1361815/600x400) no-repeat center center / cover"></section>
+        <section class="details">
+            <h3>Cadastro de Professor</h3>
+            <div class="item">
+                <div>Avatar URL</div>
+                <div><input type="url" name="avatar" placeholder="https://..."></div>
+            </div>
+            <div class="item">
+                <div>Nome Completo</div>
+                <div><input type="text" name="name" placeholder="Nome do professor..."></div>
+            </div>
+            <div class="item">
+                <div>Idade</div>
+                <div><input type="number" name="idade" placeholder="Idade do professor..."></div>
+            </div>
+            <div class="item">
+                <div>Grau de Escolaridade</div>
+                <div>
+                    <select name="escolaridade">
+                        <option value="Ensino Médio Completo">Ensino Médio Completo</option>
+                        <option value="Ensino Superior Completo">Ensino Superior Completo</option>
+                        <option value="Mestrado" selected>Mestrado</option>
+                        <option value="Doutorado">Doutorado</option>
+                    </select>
+                </div>
+            </div>
+            <div class="item">
+                <div>Tipo de Aula</div>
+                    <span><input type="radio" name="tipoAula" value="Presencial" checked>Presencial</span>
+                    <span><input type="radio" name="tipoAula" value="EaD">Ensino à Distância</span>
+            </div>
+            <div class="item">
+                <div>Área de Atuação</div>
+                <div><input type="text" name="areaAtuacao"></div>
+            </div>
+            <button type="submit">Salvar</button>
+        </section>
+    </form>
+
+{% endblock content %}

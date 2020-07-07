@@ -2,6 +2,7 @@
 
 const express = require('express')
 const routes = express.Router()
+const teachers = require('./teachers')
 
 routes.get('/', function(req, res){
     return res.redirect("/teachers")
@@ -14,5 +15,11 @@ routes.get('/teachers', function(req, res){
 routes.get('/students', function(req, res){
     return res.render('students')
 })
+
+routes.get('/form-teachers', function(req, res){
+    return res.render('teachers/form-teachers')
+})
+
+routes.post("/teachers", teachers.post)
 
 module.exports = routes
