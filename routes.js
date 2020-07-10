@@ -16,6 +16,10 @@ routes.get('/students', function(req, res){
     return res.render('students')
 })
 
+routes.get('/students/:id', function(req, res){
+    return res.render('students')
+})
+
 routes.get('/form-teachers', function(req, res){
     return res.render('teachers/form-teachers')
 })

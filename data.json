@@ -1,3 +1,14 @@
 {
-    "teachers": []
+    "teachers": [
+        {
+            "id": 1,
+            "avatar": "https://google.com",
+            "name": "Abner Pena de Souza",
+            "birthDate": 928800000000,
+            "schooling": "Mestrado",
+            "classType": "Presencial",
+            "actuation": "Matemática",
+            "creationDate": 1594139241552
+        }
+    ]
 }

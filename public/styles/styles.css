@@ -2,6 +2,10 @@
 
 :root {
     --main-color: #f5910e;
+    --bg-color: white;
+    --color-text: #fff;
+    --dark-color: #282a36;
+    --color-green: #50fa7b; 
 }
 
 * {
@@ -15,17 +19,117 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.bodyDark {
+    background-color: var(--dark-color);
+    transition: background-color .5s ease-in-out
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    color: var(--color-text);
+    background-color: var(--main-color);
+    transition: background-color .5s ease-in-out, color .5s ease-in-out;
+}
+
+.dark {
+    --background-color: #282a36;
+    --color-text: #fff;
+    color: var(--color-text);
+    background-color: var(--background-color);
+    transition: background-color .5s ease-in-out, color .5s ease-in-out;
+}
+
 header {
-    background-color: white;
+    background-color: var(--bg-color);
+    width: 100%;
+    padding: 35px;
+    color: #777;
+    text-align: center;
+    box-sizing: border-box;
+    border-bottom: none;
+    transition: background-color .5s ease-in-out, color .5s ease-in-out, border .5s ease-in-out;
+}
+
+header .darkModeBlock {
+    display: block;
+}
+
+header h3 {
+    color: #777;
+    transition: color .5s ease-in-out;
+}
+
+.headerDarkMode {
+    --background-color: #282a36;
+    background-color: var(--background-color);
+    color: white;
     width: 100%;
     padding: 35px;
     text-align: center;
     box-sizing: border-box;
+    border-bottom: 1px solid gray;
+    transition: background-color .5s ease-in-out, color .5s ease-in-out, border .5s ease-in-out;
+}
+
+.headerDarkMode h3 {
+    color: white;
+    transition: color .5s ease-in-out;
+}
+
+/* Toggle darkMode */
+.darkMode {
+    border: 1px solid #333;
+    border-radius: 22px;
+    background-color: #c1c1c1;
+    width: 70px;
+    height: 35px;
+    display: inline-block;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.dark-mode-on {
+    border: 1px solid #fff;
+    background-color: var(--color-green);
+}
+
+.darkMode .dark-mode-circle {
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+ .circle-right {
+    transform: translateX(32px);
+    background-color: #aaaaaa !important;
+} 
+
+.toggle {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.toggle .darkMode {
+    margin-right: 16px;
+    text-align: center;
 }
 
 .links {
     font-size: 25px;
-
+    display: grid;
+    padding-bottom: 5px;
+    margin-right: 200px;
+    margin-left: 200px;
+    padding-bottom: 1px;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: #777;
+    align-items: center;
+    transition: color .5s ease-in-out;
 }
 
 /* Isso serve para aplicar o estilo no elemento da direita somente */
@@ -70,6 +174,7 @@ header {
 .card {
     width: 800px;
     background-color: white;
+    color: black;
     min-height: 600px;
     margin: 50px auto;
     display: grid;
@@ -134,42 +239,20 @@ header {
 }
 
 .details .item:last-child {
-    border-bottom: 1px solid rgba(0,0,0,0.1);
+    border: none;
 }
 
 input {
     width: 100%;
-    padding: 16px auto;
-    font-size: 16px;
     outline: none;
+    background-color: rgba(0, 0, 0, 0.0);
+    color: #555;
     font-weight: bold;
+    font-size: 20px;
+    transition: background-color .5s ease-in-out;
 }
 
-select {
-    width: 100%;
-    font-size: 16px;
-    font-weight: bold;
-    outline: none;
-}
-
-input[type="radio"]{
-    margin-right: 8px;
-    width: initial;
-}
-
-button[type="submit"] {
-    width: 100%;
-    background-color: gray;
-    color: white;
-    font-size: 16px;
-    padding: 8px 32px;
-    border-radius: 4px;
-    margin-top: 8px;
-    cursor: pointer;
-}
-
-button[type="submit"]:hover {
-    background-color: var(--main-color);
-    color: white;
-    transition: 700ms;
+.inputDarkMode {
+    background-color: #e5e5e5;
+    transition: background-color .5s ease-in-out;
 }
