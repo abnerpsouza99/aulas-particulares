@@ -1,0 +1,38 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+    <div class="card">
+        <section class="image-teacher" style="background: url({{teacher.avatar}}) no-repeat center center / cover"></section>
+        <section class="details">
+            <h3>Informações</h3>
+            <div class="item">
+                <div>Nome Completo</div>
+                <div>{{teacher.name}}</div>
+            </div>
+            <div class="item">
+                <div>Idade</div>
+                <div>{{teacher.age}}</div>
+            </div>
+            <div class="item">
+                <div>Grau de Escolaridade</div>
+                <div>{{teacher.schooling}}</div>
+            </div>
+            <div class="item">
+                <div>Tipo de Aula</div>
+                <div>{{"Presencial" if teacher.classType == "Presencial" else "EaD"}}</div>
+            </div>
+            <div class="item">
+                <div>Acompanhamento</div>
+                {% for actuation in teacher.actuations %}
+                  <span>{{actuation}}</span>
+                {% endfor %}
+            </div>
+            <div class="item">
+                <div>Desde</div>
+                <div>{{teacher.creationDate}}</div>
+            </div>
+        </section>
+    </div>
+
+{% endblock content %}

@@ -24,6 +24,8 @@ routes.get('/form-teachers', function(req, res){
     return res.render('teachers/form-teachers')
 })
 
+routes.get('/teachers/:id', teachers.show)
+
 routes.post("/teachers", teachers.post)
 
 module.exports = routes

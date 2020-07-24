@@ -9,6 +9,16 @@
             "classType": "Presencial",
             "actuation": "Matemática",
             "creationDate": 1594139241552
+        },
+        {
+            "id": 2,
+            "avatar": "htttps://www.google.com",
+            "name": "Juliana Avila",
+            "birthDate": 897696000000,
+            "schooling": "Ensino Médio Completo",
+            "classType": "EaD",
+            "actuation": "Física, Matemática",
+            "creationDate": 1595550380585
         }
     ]
 }

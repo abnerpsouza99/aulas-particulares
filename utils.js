@@ -14,6 +14,20 @@ module.exports = {
         }
 
         return age
+    },
+    graduation: function(value){
+        switch(value){
+            case "EM": 
+                return "Ensino Médio Completo"    
+            case "ES":
+                return "Ensino Superior Completo"
+            case "ME": 
+                return "Mestrado"
+            case "DO":
+                return "Doutorado"                                    
+        }
+
+        return value;
     }
 
 }

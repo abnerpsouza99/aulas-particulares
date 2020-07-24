@@ -1,6 +1,7 @@
 const fs = require('fs')
 const data = require('./data.json')
-const { COPYFILE_FICLONE } = require('constants')
+const {age, graduation} = require('./utils')
+const Intl = require('intl')
 
 // Criando rota de post
 exports.post = function (req, res) {
@@ -57,7 +58,11 @@ exports.show = function(req, res){
 
     const teacher = {
         ...foundTeacher,
-        
-
+        age: age(foundTeacher.birthDate),
+        actuations: foundTeacher.actuation.split(","),
+        creationDate: new Intl.DateTimeFormat("pt-BR").format(foundTeacher.creationDate),
+        schooling: graduation(foundTeacher.schooling)
     }
+
+    return res.render("teachers/show", {teacher})
 }
